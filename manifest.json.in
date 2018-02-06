@@ -1,0 +1,15 @@
+{
+    "name": "kidbrowser.bhdouglass",
+    "description": "A safe browser for kids",
+    "architecture": "@CLICK_ARCH@",
+    "title": "KidBrowser",
+    "hooks": {
+        "kidbrowser": {
+            "apparmor": "kidbrowser.apparmor",
+            "desktop":  "kidbrowser.desktop"
+        }
+    },
+    "version": "0.0.1",
+    "maintainer": "Brian Douglass <bhdouglass@gmail.com>",
+    "framework" : "ubuntu-sdk-15.04.6"
+}

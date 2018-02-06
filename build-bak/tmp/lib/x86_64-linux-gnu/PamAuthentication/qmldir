@@ -1,0 +1,4 @@
+module PamAuthentication
+plugin PamAuthentication
+AuthenticationHandler 0.1 AuthenticationHandler.qml
+PasswordDialog 0.1 PasswordDialog.qml

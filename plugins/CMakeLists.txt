@@ -1,0 +1,2 @@
+add_subdirectory(KidBrowser)
+add_subdirectory(PamAuthentication)

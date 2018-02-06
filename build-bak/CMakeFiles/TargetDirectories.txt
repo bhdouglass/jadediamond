@@ -1,0 +1,6 @@
+/home/brian/dev/ubuntu/apps/kidbrowser/build/plugins/KidBrowser/CMakeFiles/KidBrowser.dir
+/home/brian/dev/ubuntu/apps/kidbrowser/build/plugins/KidBrowser/CMakeFiles/KidBrowser_automoc.dir
+/home/brian/dev/ubuntu/apps/kidbrowser/build/plugins/PamAuthentication/CMakeFiles/PamAuthentication.dir
+/home/brian/dev/ubuntu/apps/kidbrowser/build/plugins/PamAuthentication/CMakeFiles/PamAuthentication_automoc.dir
+/home/brian/dev/ubuntu/apps/kidbrowser/build/po/CMakeFiles/kidbrowser.bhdouglass.pot.dir
+/home/brian/dev/ubuntu/apps/kidbrowser/build/CMakeFiles/kidbrowser.desktop.dir

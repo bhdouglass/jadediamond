@@ -1,0 +1,7 @@
+{
+  "template": "cmake",
+  "kill": "qmlscene",
+  "dependencies": [
+    "libpam0g-dev"
+  ]
+}
