@@ -2,11 +2,15 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QStandardPaths>
 
 #include "kidbrowser.h"
 
 KidBrowser::KidBrowser() {
     m_database = QSqlDatabase::addDatabase("QSQLITE");
+    QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/kidbrowser.sqlite";
+    qDebug() << "Database at" << path;
+    m_database.setDatabaseName(path);
 
     if (!m_database.open()) {
         qDebug() << "Failed to open database";
@@ -44,6 +48,8 @@ bool KidBrowser::isWhitelisted(QString domain) {
 }
 
 void KidBrowser::addBlacklist(QString domain) {
+    qDebug() << "Adding to blacklist" << domain;
+
     QDateTime now = QDateTime::currentDateTime();
     QString sql = QString("INSERT INTO blacklist VALUES(NULL, '%1', '%2')")
         .arg(domain)
@@ -56,6 +62,8 @@ void KidBrowser::addBlacklist(QString domain) {
 }
 
 void KidBrowser::addWhitelist(QString domain) {
+    qDebug() << "Adding to whitelist" << domain;
+
     QDateTime now = QDateTime::currentDateTime();
     QString sql = QString("INSERT INTO whitelist VALUES(NULL, '%1', '%2')")
         .arg(domain)

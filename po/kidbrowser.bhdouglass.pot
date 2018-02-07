@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-06 18:21+0000\n"
+"POT-Creation-Date: 2018-02-07 07:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,40 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:231 ../qml/Main.qml:247
+#: ../qml/Main.qml:232 ../qml/Main.qml:248
 msgid "Not Allowed"
 msgstr ""
 
-#: ../qml/Main.qml:232
+#: ../qml/Main.qml:233
 msgid "Accessing IP addresses is not allowed"
 msgstr ""
 
-#: ../qml/Main.qml:235 ../qml/Main.qml:251 ../qml/Dialogs/PromptDialog.qml:14
+#: ../qml/Main.qml:236 ../qml/Main.qml:252 ../qml/Dialogs/PromptDialog.qml:14
 #: ../qml/Dialogs/ConfirmDialog.qml:8 ../qml/Dialogs/AlertDialog.qml:8
 msgid "OK"
 msgstr ""
 
-#: ../qml/Main.qml:248
+#: ../qml/Main.qml:249
 msgid "Access to this site has been blocked"
 msgstr ""
 
-#: ../qml/Main.qml:288
+#: ../qml/Main.qml:291
 msgid "Access Requested"
 msgstr ""
 
-#: ../qml/Main.qml:289
+#: ../qml/Main.qml:292
 msgid "Access to %DOMAIN% requested"
 msgstr ""
 
-#: ../qml/Main.qml:292
+#: ../qml/Main.qml:295
 msgid "Grant Access"
 msgstr ""
 
-#: ../qml/Main.qml:305
+#: ../qml/Main.qml:299
+msgid "Enter your password to grant access to %DOMAIN%"
+msgstr ""
+
+#: ../qml/Main.qml:304
 msgid "Block Access"
 msgstr ""
 
-#: ../qml/Main.qml:316 ../qml/Dialogs/PromptDialog.qml:20
+#: ../qml/Main.qml:308
+msgid "Enter your password to block access to %DOMAIN%"
+msgstr ""
+
+#: ../qml/Main.qml:313 ../qml/Dialogs/PromptDialog.qml:20
 #: ../qml/Dialogs/ConfirmDialog.qml:13
 msgid "Cancel"
 msgstr ""

@@ -93,6 +93,7 @@ MainView {
                     id: navigator
 
                     Layout.fillWidth: true
+                    inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
 
                     onAccepted: {
                         var url = text;
@@ -265,6 +266,7 @@ MainView {
                 serviceName: root.applicationName
 
                 onAuthenticationSucceeded: {
+                    console.log('onAuthenticationSucceeded', confirmNavigationDialog.goingToBlacklist);
                     if (confirmNavigationDialog.goingToBlacklist) {
                         KidBrowser.addBlacklist(confirmNavigationDialog.domain);
                     }
@@ -277,6 +279,7 @@ MainView {
                 }
 
                 onAuthenticationAborted: {
+                    console.log('onAuthenticationAborted');
                     PopupUtils.close(confirmNavigationDialog);
                 }
             }
@@ -292,12 +295,8 @@ MainView {
                 text: i18n.tr('Grant Access')
                 color: UbuntuColors.green
                 onClicked: {
-                    goingToBlacklist = true;
-                        KidBrowser.addWhitelist(confirmNavigationDialog.domain);
-                        webview.url = confirmNavigationDialog.url;
-                    //authHandler.authenticate(i18n.tr('Enter your password to grant access to %DOMAIN%').replace('%DOMAIN%', domain));
-                    PopupUtils.close(confirmNavigationDialog);
-
+                    goingToBlacklist = false;
+                    authHandler.authenticate(i18n.tr('Enter your password to grant access to %DOMAIN%').replace('%DOMAIN%', domain));
                 }
             }
 
@@ -305,10 +304,8 @@ MainView {
                 text: i18n.tr('Block Access')
                 color: UbuntuColors.red
                 onClicked: {
-                    goingToBlacklist = false;
-                    KidBrowser.addBlacklist(confirmNavigationDialog.domain);
-                    PopupUtils.close(confirmNavigationDialog);
-                    //authHandler.authenticate(i18n.tr('Enter your password to block access to %DOMAIN%').replace('%DOMAIN%', domain));
+                    goingToBlacklist = true;
+                    authHandler.authenticate(i18n.tr('Enter your password to block access to %DOMAIN%').replace('%DOMAIN%', domain));
                 }
             }
 

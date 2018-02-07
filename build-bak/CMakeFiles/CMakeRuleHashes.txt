@@ -1,5 +1,0 @@
-# Hashes of file build rules.
-d7d5e0bab272d84af96c393e77d3dffb CMakeFiles/kidbrowser.desktop
-975daf30ad457ddd2dcf8f04b43d4733 plugins/KidBrowser/CMakeFiles/KidBrowser_automoc
-1c5a05c807dfefc2c022516bf82c6bee plugins/PamAuthentication/CMakeFiles/PamAuthentication_automoc
-cc334b8e577da021e1ea246455a4f32d po/CMakeFiles/kidbrowser.bhdouglass.pot
