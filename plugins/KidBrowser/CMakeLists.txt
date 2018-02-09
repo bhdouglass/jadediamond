@@ -4,6 +4,7 @@ set(PLUGIN "KidBrowser")
 set(
     SRC
     plugin.cpp
+    urlrecord.cpp
     kidbrowser.cpp
 )
 

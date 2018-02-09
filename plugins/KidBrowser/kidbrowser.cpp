@@ -55,10 +55,24 @@ void KidBrowser::addBlacklist(QString domain) {
         .arg(domain)
         .arg(now.toString("yyyy-MM-dd hh:mm:ss"));
 
-    QSqlQuery q(sql);
-    if (!q.exec()) {
+    QSqlQuery q;
+    if (!q.exec(sql)) {
         qDebug() << "Failed to insert into blacklist" << q.lastError();
     }
+
+    Q_EMIT blacklistChanged();
+}
+
+void KidBrowser::removeBlacklist(QString domain) {
+    qDebug() << "Removing from blacklist" << domain;
+
+    QString sql = QString("DELETE FROM blacklist WHERE domain='%1'").arg(domain);
+    QSqlQuery q;
+    if (!q.exec(sql)) {
+        qDebug() << "Failed to remove from blacklist" << q.lastError();
+    }
+
+    Q_EMIT blacklistChanged();
 }
 
 void KidBrowser::addWhitelist(QString domain) {
@@ -69,21 +83,124 @@ void KidBrowser::addWhitelist(QString domain) {
         .arg(domain)
         .arg(now.toString("yyyy-MM-dd hh:mm:ss"));
 
-    QSqlQuery q(sql);
-    if (!q.exec()) {
+    QSqlQuery q;
+    if (!q.exec(sql)) {
         qDebug() << "Failed to insert into whitelist" << q.lastError();
     }
+
+    Q_EMIT whitelistChanged();
+}
+
+void KidBrowser::removeWhitelist(QString domain) {
+    qDebug() << "Removing from whitelist" << domain;
+
+    QString sql = QString("DELETE FROM whitelist WHERE domain='%1'").arg(domain);
+    QSqlQuery q;
+    if (!q.exec(sql)) {
+        qDebug() << "Failed to remove from whitelist" << q.lastError();
+    }
+
+    Q_EMIT whitelistChanged();
 }
 
 void KidBrowser::addHistory(QString url, QString title) {
     QDateTime now = QDateTime::currentDateTime();
-    QString sql = QString("INSERT INTO history VALUES(NULL, '%1', '%2' '%3')")
+    QString sql = QString("INSERT INTO history VALUES(NULL, '%1', '%2', '%3')")
         .arg(url)
         .arg(title)
         .arg(now.toString("yyyy-MM-dd hh:mm:ss"));
 
-    QSqlQuery q(sql);
-    if (!q.exec()) {
+    QSqlQuery q;
+    if (!q.exec(sql)) {
         qDebug() << "Failed to insert into history" << q.lastError();
     }
+    //TODO limit size
+
+    Q_EMIT historyChanged();
+}
+
+
+QQmlListProperty<URLRecord> KidBrowser::blacklist() {
+    blacklistRecords.clear();
+
+    QSqlQuery query("SELECT * FROM blacklist ORDER BY datetime");
+    while (query.next()) {
+        URLRecord *record = new URLRecord(
+            query.value("domain").toString(),
+            QDateTime::fromString(query.value("datetime").toString(), "yyyy-MM-dd hh:mm:ss"),
+            this
+        );
+
+        blacklistRecords.append(record);
+    }
+
+    return QQmlListProperty<URLRecord>(this, blacklistRecords);
+}
+
+int KidBrowser::blacklistCount() {
+    QString sql = QString("SELECT COUNT(id) AS count FROM blacklist");
+    QSqlQuery q(sql);
+
+    if (q.next()) {
+        return q.value("count").toInt();
+    }
+
+    return 0;
+}
+
+QQmlListProperty<URLRecord> KidBrowser::whitelist() {
+    whitelistRecords.clear();
+
+    QSqlQuery query("SELECT * FROM whitelist ORDER BY domain");
+    while (query.next()) {
+        URLRecord *record = new URLRecord(
+            query.value("domain").toString(),
+            QDateTime::fromString(query.value("datetime").toString(), "yyyy-MM-dd hh:mm:ss"),
+            this
+        );
+
+        whitelistRecords.append(record);
+    }
+
+    return QQmlListProperty<URLRecord>(this, whitelistRecords);
+}
+
+int KidBrowser::whitelistCount() {
+    QString sql = QString("SELECT COUNT(id) AS count FROM whitelist");
+    QSqlQuery q(sql);
+
+    if (q.next()) {
+        return q.value("count").toInt();
+    }
+
+    return 0;
+}
+
+QQmlListProperty<URLRecord> KidBrowser::history() {
+    historyRecords.clear();
+
+    QSqlQuery query("SELECT * FROM history ORDER BY datetime DESC");
+    while (query.next()) {
+        URLRecord *record = new URLRecord(
+            query.value("url").toString(),
+            query.value("title").toString(),
+            QDateTime::fromString(query.value("datetime").toString(), "yyyy-MM-dd hh:mm:ss"),
+            this
+        );
+
+        historyRecords.append(record);
+    }
+
+    return QQmlListProperty<URLRecord>(this, historyRecords);
+}
+
+int KidBrowser::historyCount() {
+    QString sql = QString("SELECT COUNT(id) AS count FROM history");
+    QSqlQuery q(sql);
+
+    if (q.next()) {
+        return q.value("count").toInt();
+    }
+
+    return 0;
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 07:00+0000\n"
+"POT-Creation-Date: 2018-02-09 16:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,74 +17,124 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:232 ../qml/Main.qml:248
-msgid "Not Allowed"
-msgstr ""
-
-#: ../qml/Main.qml:233
-msgid "Accessing IP addresses is not allowed"
-msgstr ""
-
-#: ../qml/Main.qml:236 ../qml/Main.qml:252 ../qml/Dialogs/PromptDialog.qml:14
-#: ../qml/Dialogs/ConfirmDialog.qml:8 ../qml/Dialogs/AlertDialog.qml:8
-msgid "OK"
-msgstr ""
-
-#: ../qml/Main.qml:249
-msgid "Access to this site has been blocked"
-msgstr ""
-
-#: ../qml/Main.qml:291
-msgid "Access Requested"
-msgstr ""
-
-#: ../qml/Main.qml:292
-msgid "Access to %DOMAIN% requested"
-msgstr ""
-
-#: ../qml/Main.qml:295
-msgid "Grant Access"
-msgstr ""
-
-#: ../qml/Main.qml:299
-msgid "Enter your password to grant access to %DOMAIN%"
-msgstr ""
-
-#: ../qml/Main.qml:304
-msgid "Block Access"
-msgstr ""
-
-#: ../qml/Main.qml:308
-msgid "Enter your password to block access to %DOMAIN%"
-msgstr ""
-
-#: ../qml/Main.qml:313 ../qml/Dialogs/PromptDialog.qml:20
-#: ../qml/Dialogs/ConfirmDialog.qml:13
-msgid "Cancel"
-msgstr ""
-
-#: ../qml/Dialogs/PromptDialog.qml:5
+#: ../qml/BrowserDialogs/PromptDialog.qml:5
 msgid "Prompt"
 msgstr ""
 
-#: ../qml/Dialogs/BeforeUnloadDialog.qml:5
+#: ../qml/BrowserDialogs/PromptDialog.qml:14
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:8
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:248
+#: ../qml/BrowserPage.qml:264
+msgid "OK"
+msgstr ""
+
+#: ../qml/BrowserDialogs/PromptDialog.qml:20
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:338
+msgid "Cancel"
+msgstr ""
+
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:5
 msgid "Confirm Navigation"
 msgstr ""
 
-#: ../qml/Dialogs/BeforeUnloadDialog.qml:8
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:8
 msgid "Leave"
 msgstr ""
 
-#: ../qml/Dialogs/BeforeUnloadDialog.qml:13
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:13
 msgid "Stay"
 msgstr ""
 
-#: ../qml/Dialogs/ConfirmDialog.qml:5
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:5
 msgid "Confirmation"
 msgstr ""
 
-#: ../qml/Dialogs/AlertDialog.qml:5
+#: ../qml/BrowserDialogs/AlertDialog.qml:5
 msgid "Alert"
+msgstr ""
+
+#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:131
+msgid "History"
+msgstr ""
+
+#: ../qml/HistoryPage.qml:20
+msgid ""
+"We are not makers of history. We are made by history.\n"
+"- Martin Luther King, Jr."
+msgstr ""
+
+#. TRANSLATORS: Date/time reference here: http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method
+#: ../qml/HistoryPage.qml:55
+msgid "MM/dd/yy hh:mm"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:111
+msgid "Forward"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:118
+msgid "Back"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:125
+msgid "Refresh"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:140 ../qml/BlacklistPage.qml:12
+msgid "Blacklist"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:146 ../qml/WhitelistPage.qml:12
+msgid "Whitelist"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:244 ../qml/BrowserPage.qml:260
+msgid "Not Allowed"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:245
+msgid "Accessing IP addresses is not allowed"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:261
+msgid "Access to this site has been blocked"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:301
+msgid "Access Requested"
+msgstr ""
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
+#: ../qml/BrowserPage.qml:304
+msgid "Access to %DOMAIN% requested"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:307
+msgid "Grant Access"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:323
+msgid "Block Access"
+msgstr ""
+
+#: ../qml/WhitelistPage.qml:24
+msgid "List of allowed sites"
+msgstr ""
+
+#: ../qml/WhitelistPage.qml:32
+msgid "No allowed sites"
+msgstr ""
+
+#: ../qml/WhitelistPage.qml:74 ../qml/BlacklistPage.qml:74
+msgid "Remove"
+msgstr ""
+
+#: ../qml/BlacklistPage.qml:24
+msgid "List of blocked sites"
+msgstr ""
+
+#: ../qml/BlacklistPage.qml:32
+msgid "No blocked sites"
 msgstr ""
 
 #: kidbrowser.desktop.in.h:1
