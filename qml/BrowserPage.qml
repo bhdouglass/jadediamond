@@ -145,6 +145,12 @@ Page {
                     iconName: 'view-list-symbolic'
                     text: i18n.tr('Whitelist')
                     onTriggered: pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'))
+                },
+
+                Action {
+                    iconName: 'info'
+                    text: i18n.tr('About')
+                    onTriggered: pageStack.push(Qt.resolvedUrl('AboutPage.qml'))
                 }
             ]
         }

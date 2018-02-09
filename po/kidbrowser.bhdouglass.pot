@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 16:41+0000\n"
+"POT-Creation-Date: 2018-02-09 16:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:14
 #: ../qml/BrowserDialogs/ConfirmDialog.qml:8
-#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:248
-#: ../qml/BrowserPage.qml:264
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:254
+#: ../qml/BrowserPage.qml:270
 msgid "OK"
 msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:20
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:338
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:344
 msgid "Cancel"
 msgstr ""
 
@@ -68,6 +68,24 @@ msgstr ""
 msgid "MM/dd/yy hh:mm"
 msgstr ""
 
+#: ../qml/AboutPage.qml:12 ../qml/BrowserPage.qml:152
+msgid "About"
+msgstr ""
+
+#: ../qml/AboutPage.qml:41 kidbrowser.desktop.in.h:1
+msgid "KidBrowser"
+msgstr ""
+
+#: ../qml/AboutPage.qml:45
+msgid "Author: Brian Douglass"
+msgstr ""
+
+#: ../qml/AboutPage.qml:54
+msgid ""
+"Special thanks to the UBParents Group\n"
+"for suggestions and testing"
+msgstr ""
+
 #: ../qml/BrowserPage.qml:111
 msgid "Forward"
 msgstr ""
@@ -88,32 +106,32 @@ msgstr ""
 msgid "Whitelist"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:244 ../qml/BrowserPage.qml:260
+#: ../qml/BrowserPage.qml:250 ../qml/BrowserPage.qml:266
 msgid "Not Allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:245
+#: ../qml/BrowserPage.qml:251
 msgid "Accessing IP addresses is not allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:261
+#: ../qml/BrowserPage.qml:267
 msgid "Access to this site has been blocked"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:301
+#: ../qml/BrowserPage.qml:307
 msgid "Access Requested"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:304
+#: ../qml/BrowserPage.qml:310
 msgid "Access to %DOMAIN% requested"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:307
+#: ../qml/BrowserPage.qml:313
 msgid "Grant Access"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:323
+#: ../qml/BrowserPage.qml:329
 msgid "Block Access"
 msgstr ""
 
@@ -135,8 +153,4 @@ msgstr ""
 
 #: ../qml/BlacklistPage.qml:32
 msgid "No blocked sites"
-msgstr ""
-
-#: kidbrowser.desktop.in.h:1
-msgid "KidBrowser"
 msgstr ""
