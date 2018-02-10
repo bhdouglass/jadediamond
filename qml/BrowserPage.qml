@@ -102,7 +102,10 @@ Page {
                 Layout.fillWidth: true
                 inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
 
-                onAccepted: navigate(text)
+                onAccepted: {
+                    welcome.visible = false;
+                    navigate(text);
+                }
             }
         }
 
@@ -112,32 +115,45 @@ Page {
                     iconName: 'go-next'
                     text: i18n.tr('Forward')
                     enabled: webview.canGoForward
-                    onTriggered: webview.goForward()
+                    onTriggered: {
+                        welcome.visible = false;
+                        webview.goForward();
+                    }
                 },
 
                 Action {
                     iconName: 'go-previous'
                     text: i18n.tr('Back')
                     enabled: webview.canGoBack
-                    onTriggered: webview.goBack()
+                    onTriggered: {
+                        welcome.visible = false;
+                        webview.goBack();
+                    }
                 },
 
                 Action {
                     iconName: 'reload'
                     text: i18n.tr('Refresh')
-                    onTriggered: webview.reload()
+                    onTriggered: {
+                        welcome.visible = false;
+                        webview.reload();
+                    }
                 },
 
                 Action {
                     iconName: 'go-home'
                     text: i18n.tr('Home')
-                    onTriggered: navigate(settings.homePage)
+                    onTriggered: {
+                        welcome.visible = false;
+                        navigate(settings.homePage);
+                    }
                 },
 
                 Action {
                     iconName: 'history'
                     text: i18n.tr('History')
                     onTriggered: {
+                        welcome.visible = false;
                         var page = pageStack.push(Qt.resolvedUrl('HistoryPage.qml'));
                         page.onUrlSelected.connect(closeListPage);
                     }
@@ -146,13 +162,19 @@ Page {
                 Action {
                     iconName: 'view-list-symbolic'
                     text: i18n.tr('Blacklist')
-                    onTriggered: pageStack.push(Qt.resolvedUrl('BlacklistPage.qml'))
+                    onTriggered: {
+                        welcome.visible = false;
+                        pageStack.push(Qt.resolvedUrl('BlacklistPage.qml'));
+                    }
                 },
 
                 Action {
                     iconName: 'view-list-symbolic'
                     text: i18n.tr('Whitelist')
-                    onTriggered: pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'))
+                    onTriggered: {
+                        welcome.visible = false;
+                        pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'));
+                    }
                 },
 
                 Action {
@@ -164,7 +186,10 @@ Page {
                 Action {
                     iconName: 'info'
                     text: i18n.tr('About')
-                    onTriggered: pageStack.push(Qt.resolvedUrl('AboutPage.qml'))
+                    onTriggered: {
+                        welcome.visible = false;
+                        pageStack.push(Qt.resolvedUrl('AboutPage.qml'));
+                    }
                 }
             ]
         }
