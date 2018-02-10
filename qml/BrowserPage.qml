@@ -4,17 +4,13 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Web 0.2
 import com.canonical.Oxide 1.0 as Oxide
+import Qt.labs.settings 1.0
 
 import KidBrowser 1.0
 import PamAuthentication 0.1
 import "BrowserDialogs" as BrowserDialogs
 
 Page {
-    // TODO black list editor
-    // TODO white list editor
-    // TODO history view
-    // TODO set homepage option
-
     function parseDomain(url) {
         var domain = url.replace('http://', '').replace('https://', '')
         if (domain.indexOf('/') > -1) {
@@ -65,12 +61,27 @@ Page {
         return ok;
     }
 
+    function navigate(url) {
+        if (url.substring(0, 7) != 'http://' && url.substring(0, 8) != 'https://') {
+            url = 'http://' + url;
+        }
+
+        if (navigationRequest(url)) {
+            webview.url = url;
+        }
+    }
+
     function closeListPage(url) {
         if (url && navigationRequest(url)) {
             webview.url = url;
         }
 
         pageStack.pop();
+    }
+
+    Settings {
+        id: settings
+        property string homePage
     }
 
     header: PageHeader {
@@ -91,16 +102,7 @@ Page {
                 Layout.fillWidth: true
                 inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
 
-                onAccepted: {
-                    var url = text;
-                    if (url.substring(0, 7) != 'http://' && url.substring(0, 8) != 'https://') {
-                        url = 'http://' + url;
-                    }
-
-                    if (navigationRequest(url)) {
-                        webview.url = url;
-                    }
-                }
+                onAccepted: navigate(text)
             }
         }
 
@@ -127,6 +129,12 @@ Page {
                 },
 
                 Action {
+                    iconName: 'go-home'
+                    text: i18n.tr('Home')
+                    onTriggered: navigate(settings.homePage)
+                },
+
+                Action {
                     iconName: 'history'
                     text: i18n.tr('History')
                     onTriggered: {
@@ -145,6 +153,12 @@ Page {
                     iconName: 'view-list-symbolic'
                     text: i18n.tr('Whitelist')
                     onTriggered: pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'))
+                },
+
+                Action {
+                    iconName: 'stock_website'
+                    text: i18n.tr('Welcome')
+                    onTriggered: welcome.visible = true
                 },
 
                 Action {
@@ -170,6 +184,8 @@ Page {
             bottom: parent.bottom
         }
 
+        visible: !welcome.visible
+
         alertDialog: BrowserDialogs.AlertDialog {}
         confirmDialog: BrowserDialogs.ConfirmDialog {}
         promptDialog: BrowserDialogs.PromptDialog {}
@@ -178,11 +194,9 @@ Page {
 
         //TODO dns error page
 
-        property string home: 'https://ubuntu.com/' //TODO better default
         property string lastUrl
 
         context: webcontext
-        url: home
         onUrlChanged: {
             var strUrl = url.toString();
             navigator.text = strUrl;
@@ -212,12 +226,13 @@ Page {
             }
         }
 
-        /*onNavigationHistoryChanged: {
-            console.log(navigationHistory);
-        }*/
-
         Component.onCompleted: {
-            navigator.text = url;
+            var url = settings.homePage;
+            if (url) {
+                navigate(url);
+                navigator.text = url;
+            }
+
             preferences.localStorageEnabled = true;
         }
     }
@@ -233,6 +248,28 @@ Page {
         showProgressPercentage: false
         value: (webview.loadProgress / 100)
         visible: (webview.loading && !webview.lastLoadStopped)
+    }
+
+    WelcomeOverlay {
+        id: welcome
+        anchors {
+            top: header.bottom
+            right: parent.right
+            left: parent.left
+            bottom: parent.bottom
+        }
+
+        Component.onCompleted: {
+            visible = !settings.homePage;
+        }
+
+        onVisibleChanged: homePage = settings.homePage
+
+        onStart: {
+            navigate(url);
+            settings.homePage = url;
+            visible = false;
+        }
     }
 
     Component {
@@ -316,12 +353,14 @@ Page {
                     goingToBlacklist = false;
 
                     // TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-                    //authHandler.authenticate(i18n.tr('Enter your password to grant access to %DOMAIN%').replace('%DOMAIN%', domain));
+                    authHandler.authenticate(i18n.tr('Enter your password to grant access to %DOMAIN%').replace('%DOMAIN%', domain));
 
-                    // TODO remove for real build
+                    // For debugging on the desktop
+                    /*
                     KidBrowser.addWhitelist(confirmNavigationDialog.domain);
                     webview.url = confirmNavigationDialog.url;
                     PopupUtils.close(confirmNavigationDialog);
+                    */
                 }
             }
 
@@ -332,11 +371,13 @@ Page {
                     goingToBlacklist = true;
 
                     // TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-                    //authHandler.authenticate(i18n.tr('Enter your password to block access to %DOMAIN%').replace('%DOMAIN%', domain));
+                    authHandler.authenticate(i18n.tr('Enter your password to block access to %DOMAIN%').replace('%DOMAIN%', domain));
 
-                    // TODO remove for real build
+                    // For debugging on the desktop
+                    /*
                     KidBrowser.addBlacklist(confirmNavigationDialog.domain);
                     PopupUtils.close(confirmNavigationDialog);
+                    */
                 }
             }
 

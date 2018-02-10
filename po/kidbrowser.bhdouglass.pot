@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 16:55+0000\n"
+"POT-Creation-Date: 2018-02-10 04:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:14
 #: ../qml/BrowserDialogs/ConfirmDialog.qml:8
-#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:254
-#: ../qml/BrowserPage.qml:270
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:291
+#: ../qml/BrowserPage.qml:307
 msgid "OK"
 msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:20
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:344
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:381
 msgid "Cancel"
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
-#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:131
+#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:139
 msgid "History"
 msgstr ""
 
@@ -68,70 +68,78 @@ msgstr ""
 msgid "MM/dd/yy hh:mm"
 msgstr ""
 
-#: ../qml/AboutPage.qml:12 ../qml/BrowserPage.qml:152
+#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:166
 msgid "About"
 msgstr ""
 
-#: ../qml/AboutPage.qml:41 kidbrowser.desktop.in.h:1
+#: ../qml/AboutPage.qml:40 kidbrowser.desktop.in.h:1
 msgid "KidBrowser"
 msgstr ""
 
-#: ../qml/AboutPage.qml:45
+#: ../qml/AboutPage.qml:44
 msgid "Author: Brian Douglass"
 msgstr ""
 
-#: ../qml/AboutPage.qml:54
+#: ../qml/AboutPage.qml:53
 msgid ""
 "Special thanks to the UBParents Group\n"
-"for suggestions and testing"
+"for suggestions and testing!"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:111
+#: ../qml/BrowserPage.qml:113
 msgid "Forward"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:118
+#: ../qml/BrowserPage.qml:120
 msgid "Back"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:125
+#: ../qml/BrowserPage.qml:127
 msgid "Refresh"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:140 ../qml/BlacklistPage.qml:12
+#: ../qml/BrowserPage.qml:133
+msgid "Home"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:148 ../qml/BlacklistPage.qml:12
 msgid "Blacklist"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:146 ../qml/WhitelistPage.qml:12
+#: ../qml/BrowserPage.qml:154 ../qml/WhitelistPage.qml:12
 msgid "Whitelist"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:250 ../qml/BrowserPage.qml:266
+#: ../qml/BrowserPage.qml:160
+msgid "Welcome"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:287 ../qml/BrowserPage.qml:303
 msgid "Not Allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:251
+#: ../qml/BrowserPage.qml:288
 msgid "Accessing IP addresses is not allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:267
+#: ../qml/BrowserPage.qml:304
 msgid "Access to this site has been blocked"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:307
+#: ../qml/BrowserPage.qml:344
 msgid "Access Requested"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:310
+#: ../qml/BrowserPage.qml:347
 msgid "Access to %DOMAIN% requested"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:313
+#: ../qml/BrowserPage.qml:350
 msgid "Grant Access"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:329
+#: ../qml/BrowserPage.qml:366
 msgid "Block Access"
 msgstr ""
 
@@ -145,6 +153,40 @@ msgstr ""
 
 #: ../qml/WhitelistPage.qml:74 ../qml/BlacklistPage.qml:74
 msgid "Remove"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:24
+msgid "Welcome to KidBrowser"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:34
+msgid "Enjoy the web while safely browsing with your parents"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:41
+msgid ""
+"When you encounter a new site you will need\n"
+"to ask your parent's permission to access it"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:48
+msgid ""
+"Set your homepage\n"
+"(Ask your parents for help!)"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:63
+msgid "Start Browsing"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:71
+msgid ""
+"Parents, looking for a privacy focused search engine?\n"
+"Try DuckDuckGo!"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:78
+msgid "Use DuckDuckGo as my homepage"
 msgstr ""
 
 #: ../qml/BlacklistPage.qml:24
