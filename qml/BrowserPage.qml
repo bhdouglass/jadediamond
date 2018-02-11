@@ -173,7 +173,8 @@ Page {
                     text: i18n.tr('Whitelist')
                     onTriggered: {
                         welcome.visible = false;
-                        pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'));
+                        var page = pageStack.push(Qt.resolvedUrl('WhitelistPage.qml'));
+                        page.onUrlSelected.connect(closeListPage);
                     }
                 },
 

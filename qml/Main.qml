@@ -6,6 +6,7 @@ MainView {
     objectName: 'mainView'
     applicationName: 'kidbrowser.bhdouglass'
     automaticOrientation: true
+    anchorToKeyboard: true
 
     width: units.gu(45)
     height: units.gu(75)

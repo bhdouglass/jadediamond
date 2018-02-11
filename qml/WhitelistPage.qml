@@ -6,6 +6,8 @@ import Ubuntu.Components.ListItems 1.3
 import KidBrowser 1.0
 
 Page {
+    signal urlSelected(string url)
+
     header: PageHeader {
         id: header
 
@@ -66,6 +68,8 @@ Page {
                         text: model.url
                         verticalAlignment: Label.AlignVCenter
                     }
+
+                    onClicked: urlSelected('http://' + model.url)  // the url is actually just a domain for the whitelist
 
                     leadingActions: ListItemActions {
                         actions: [
