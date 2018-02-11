@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-11 03:51+0000\n"
+"POT-Creation-Date: 2018-02-11 04:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,12 @@ msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:14
 #: ../qml/BrowserDialogs/ConfirmDialog.qml:8
-#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:317
-#: ../qml/BrowserPage.qml:333
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:328
 msgid "OK"
 msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:20
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:411
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:406
 msgid "Cancel"
 msgstr ""
 
@@ -53,7 +52,7 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
-#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:154
+#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:166
 msgid "History"
 msgstr ""
 
@@ -68,7 +67,7 @@ msgstr ""
 msgid "MM/dd/yy hh:mm"
 msgstr ""
 
-#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:189
+#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:201
 msgid "About"
 msgstr ""
 
@@ -86,70 +85,78 @@ msgid ""
 "for suggestions and testing!"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:116
-msgid "Forward"
+#: ../qml/BrowserPage.qml:37
+msgid "Accessing localhost is not allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:126
-msgid "Back"
+#: ../qml/BrowserPage.qml:43
+msgid "Accessing a file url is not allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:136
-msgid "Refresh"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:145
-msgid "Home"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:164 ../qml/BlacklistPage.qml:12
-msgid "Blacklist"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:173 ../qml/WhitelistPage.qml:14
-msgid "Whitelist"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:183
-msgid "Welcome"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:313 ../qml/BrowserPage.qml:329
-msgid "Not Allowed"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:314
-msgid "Accessing IP addresses is not allowed"
-msgstr ""
-
-#: ../qml/BrowserPage.qml:330
+#: ../qml/BrowserPage.qml:50
 msgid "Access to this site has been blocked"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:370
+#: ../qml/BrowserPage.qml:70
+msgid "Accessing IP addresses is not allowed"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:128
+msgid "Forward"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:138
+msgid "Back"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:148
+msgid "Refresh"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:157
+msgid "Home"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:176 ../qml/BlacklistPage.qml:12
+msgid "Blacklist"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:185 ../qml/WhitelistPage.qml:14
+msgid "Whitelist"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:195
+msgid "Welcome"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:325
+msgid "Not Allowed"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:365
 msgid "Access Requested"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:373
+#: ../qml/BrowserPage.qml:368
 msgid "Access to %DOMAIN% requested"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:376
+#: ../qml/BrowserPage.qml:371
 msgid "Grant Access"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:382
+#: ../qml/BrowserPage.qml:377
 msgid "Enter your password to grant access to %DOMAIN%"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:394
+#: ../qml/BrowserPage.qml:389
 msgid "Block Access"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:400
+#: ../qml/BrowserPage.qml:395
 msgid "Enter your password to block access to %DOMAIN%"
 msgstr ""
 

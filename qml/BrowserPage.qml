@@ -30,12 +30,24 @@ Page {
         console.log('requesting navigation to ' + url);
 
         var domain = parseDomain(url);
-        if (isNaN(domain.replace(/\./g, ''))) {
+        if (domain == 'localhost') {
+            console.log('rejecting navigation to localhost');
+
+            navigator.text = webview.url;
+            PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Accessing localhost is not allowed')});
+        }
+        else if (url.indexOf('http://file://') === 0) { // http gets automatically appened for urls imputted by the user
+            console.log('rejecting navigation to file url');
+
+            navigator.text = webview.url;
+            PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Accessing a file url is not allowed')});
+        }
+        else if (isNaN(domain.replace(/\./g, ''))) {
             if (KidBrowser.isBlacklisted(domain)) {
                 console.log('rejected navigation because the request is for a blacklisted domain');
 
                 navigator.text = webview.url;
-                PopupUtils.open(blacklistRejectionComponent, root)
+                PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Access to this site has been blocked')});
             }
             else if (KidBrowser.isWhitelisted(domain)) {
                 console.log('navigation ok because the request is for a whitelisted domain');
@@ -55,7 +67,7 @@ Page {
             console.log('rejected navigation because the request is for an ip address');
 
             navigator.text = webview.url;
-            PopupUtils.open(ipRejectionComponent, root)
+            PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Accessing IP addresses is not allowed')});
         }
 
         return ok;
@@ -305,33 +317,16 @@ Page {
     }
 
     Component {
-        id: ipRejectionComponent
+        id: rejectionComponent
 
         Dialog {
-            id: ipRejectionDialog
+            id: rejectionDialog
 
             title: i18n.tr('Not Allowed')
-            text: i18n.tr('Accessing IP addresses is not allowed')
 
             Button {
                 text: i18n.tr('OK')
-                onClicked: PopupUtils.close(ipRejectionDialog)
-            }
-        }
-    }
-
-    Component {
-        id: blacklistRejectionComponent
-
-        Dialog {
-            id: blacklistRejectionDialog
-
-            title: i18n.tr('Not Allowed')
-            text: i18n.tr('Access to this site has been blocked')
-
-            Button {
-                text: i18n.tr('OK')
-                onClicked: PopupUtils.close(blacklistRejectionDialog)
+                onClicked: PopupUtils.close(rejectionDialog)
             }
         }
     }
