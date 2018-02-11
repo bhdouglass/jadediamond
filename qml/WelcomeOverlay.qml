@@ -64,19 +64,5 @@ Flickable {
             color: UbuntuColors.orange
             onClicked: start(homePageEdit.text)
         }
-
-        Label {
-            Layout.fillWidth: true
-
-            text: i18n.tr('Parents, looking for a privacy focused search engine?\nTry DuckDuckGo!')
-            horizontalAlignment: Label.AlignHCenter
-        }
-
-        Button {
-            Layout.alignment: Qt.AlignHCenter
-
-            text: i18n.tr('Use DuckDuckGo as my home page')
-            onClicked: start("https://start.duckduckgo.com/")
-        }
     }
 }

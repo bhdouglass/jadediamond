@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-11 04:02+0000\n"
+"POT-Creation-Date: 2018-02-11 04:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,16 +194,6 @@ msgstr ""
 
 #: ../qml/WelcomeOverlay.qml:63
 msgid "Start Browsing"
-msgstr ""
-
-#: ../qml/WelcomeOverlay.qml:71
-msgid ""
-"Parents, looking for a privacy focused search engine?\n"
-"Try DuckDuckGo!"
-msgstr ""
-
-#: ../qml/WelcomeOverlay.qml:78
-msgid "Use DuckDuckGo as my home page"
 msgstr ""
 
 #: ../qml/BlacklistPage.qml:24
