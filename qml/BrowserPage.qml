@@ -201,7 +201,8 @@ Page {
                     text: i18n.tr('About')
                     onTriggered: {
                         welcome.visible = false;
-                        pageStack.push(Qt.resolvedUrl('AboutPage.qml'));
+                        var page = pageStack.push(Qt.resolvedUrl('AboutPage.qml'));
+                        page.onUrlSelected.connect(closeListPage);
                     }
                 }
             ]

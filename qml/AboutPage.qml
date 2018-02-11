@@ -5,6 +5,8 @@ import Ubuntu.Components 1.3
 import KidBrowser 1.0
 
 Page {
+    signal urlSelected(string url)
+
     header: PageHeader {
         id: header
 
@@ -45,7 +47,7 @@ Page {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: Qt.openUrlExternally('http://bhdouglass.com/')
+                    onClicked: urlSelected('http://bhdouglass.com/')
                 }
             }
 
@@ -54,7 +56,7 @@ Page {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: Qt.openUrlExternally('https://t.me/UBports_Parents')
+                    onClicked: urlSelected('https://t.me/UBports_Parents')
                 }
             }
         }

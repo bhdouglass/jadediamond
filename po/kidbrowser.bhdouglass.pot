@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-11 04:18+0000\n"
+"POT-Creation-Date: 2018-02-11 06:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:14
 #: ../qml/BrowserDialogs/ConfirmDialog.qml:8
-#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:328
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:329
 msgid "OK"
 msgstr ""
 
 #: ../qml/BrowserDialogs/PromptDialog.qml:20
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:406
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:407
 msgid "Cancel"
 msgstr ""
 
@@ -67,19 +67,19 @@ msgstr ""
 msgid "MM/dd/yy hh:mm"
 msgstr ""
 
-#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:201
+#: ../qml/AboutPage.qml:13 ../qml/BrowserPage.qml:201
 msgid "About"
 msgstr ""
 
-#: ../qml/AboutPage.qml:40 kidbrowser.desktop.in.h:1
+#: ../qml/AboutPage.qml:42 kidbrowser.desktop.in.h:1
 msgid "KidBrowser"
 msgstr ""
 
-#: ../qml/AboutPage.qml:44
+#: ../qml/AboutPage.qml:46
 msgid "Author: Brian Douglass"
 msgstr ""
 
-#: ../qml/AboutPage.qml:53
+#: ../qml/AboutPage.qml:55
 msgid ""
 "Special thanks to the UBParents Group\n"
 "for suggestions and testing!"
@@ -129,34 +129,34 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:325
+#: ../qml/BrowserPage.qml:326
 msgid "Not Allowed"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:365
+#: ../qml/BrowserPage.qml:366
 msgid "Access Requested"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:368
+#: ../qml/BrowserPage.qml:369
 msgid "Access to %DOMAIN% requested"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:371
+#: ../qml/BrowserPage.qml:372
 msgid "Grant Access"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:377
+#: ../qml/BrowserPage.qml:378
 msgid "Enter your password to grant access to %DOMAIN%"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:389
+#: ../qml/BrowserPage.qml:390
 msgid "Block Access"
 msgstr ""
 
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
-#: ../qml/BrowserPage.qml:395
+#: ../qml/BrowserPage.qml:396
 msgid "Enter your password to block access to %DOMAIN%"
 msgstr ""
 
