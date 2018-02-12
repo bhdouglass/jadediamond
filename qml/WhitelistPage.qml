@@ -4,6 +4,7 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
 import KidBrowser 1.0
+import PamAuthentication 0.1
 
 Page {
     signal urlSelected(string url)
@@ -12,6 +13,17 @@ Page {
         id: header
 
         title: i18n.tr('Whitelist')
+    }
+
+    AuthenticationHandler {
+        id: authHandler
+        serviceName: root.applicationName
+
+        property string urlToRemove
+
+        onAuthenticationSucceeded: {
+            KidBrowser.removeWhitelist(urlToRemove);
+        }
     }
 
     Label {
@@ -76,7 +88,11 @@ Page {
                             Action {
                                 iconName: 'delete'
                                 text: i18n.tr('Remove')
-                                onTriggered: KidBrowser.removeWhitelist(model.url)
+                                onTriggered: {
+                                    authHandler.urlToRemove = model.url;
+                                    // TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+                                    authHandler.authenticate(i18n.tr('Enter your password remove %DOMAIN% from the whitelist').replace('%DOMAIN%', model.url));
+                                }
                             }
                         ]
                     }

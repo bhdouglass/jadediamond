@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kidbrowser.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-11 06:14+0000\n"
+"POT-Creation-Date: 2018-02-12 21:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,11 +117,11 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:176 ../qml/BlacklistPage.qml:12
+#: ../qml/BrowserPage.qml:176 ../qml/BlacklistPage.qml:13
 msgid "Blacklist"
 msgstr ""
 
-#: ../qml/BrowserPage.qml:185 ../qml/WhitelistPage.qml:14
+#: ../qml/BrowserPage.qml:185 ../qml/WhitelistPage.qml:15
 msgid "Whitelist"
 msgstr ""
 
@@ -160,16 +160,21 @@ msgstr ""
 msgid "Enter your password to block access to %DOMAIN%"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:26
+#: ../qml/WhitelistPage.qml:38
 msgid "List of allowed sites"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:34
+#: ../qml/WhitelistPage.qml:46
 msgid "No allowed sites"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:78 ../qml/BlacklistPage.qml:74
+#: ../qml/WhitelistPage.qml:90 ../qml/BlacklistPage.qml:86
 msgid "Remove"
+msgstr ""
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+#: ../qml/WhitelistPage.qml:94
+msgid "Enter your password remove %DOMAIN% from the whitelist"
 msgstr ""
 
 #: ../qml/WelcomeOverlay.qml:24
@@ -196,10 +201,15 @@ msgstr ""
 msgid "Start Browsing"
 msgstr ""
 
-#: ../qml/BlacklistPage.qml:24
+#: ../qml/BlacklistPage.qml:36
 msgid "List of blocked sites"
 msgstr ""
 
-#: ../qml/BlacklistPage.qml:32
+#: ../qml/BlacklistPage.qml:44
 msgid "No blocked sites"
+msgstr ""
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+#: ../qml/BlacklistPage.qml:90
+msgid "Enter your password remove %DOMAIN% from the blacklist"
 msgstr ""

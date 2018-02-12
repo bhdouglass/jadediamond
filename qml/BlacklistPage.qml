@@ -4,12 +4,24 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
 import KidBrowser 1.0
+import PamAuthentication 0.1
 
 Page {
     header: PageHeader {
         id: header
 
         title: i18n.tr('Blacklist')
+    }
+
+    AuthenticationHandler {
+        id: authHandler
+        serviceName: root.applicationName
+
+        property string urlToRemove
+
+        onAuthenticationSucceeded: {
+            KidBrowser.removeBlacklist(urlToRemove);
+        }
     }
 
     Label {
@@ -72,7 +84,11 @@ Page {
                             Action {
                                 iconName: 'delete'
                                 text: i18n.tr('Remove')
-                                onTriggered: KidBrowser.removeBlacklist(model.url)
+                                onTriggered: {
+                                    authHandler.urlToRemove = model.url;
+                                    // TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+                                    authHandler.authenticate(i18n.tr('Enter your password remove %DOMAIN% from the blacklist').replace('%DOMAIN%', model.url));
+                                }
                             }
                         ]
                     }
