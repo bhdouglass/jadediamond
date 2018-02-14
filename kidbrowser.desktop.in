@@ -1,6 +1,6 @@
 [Desktop Entry]
 _Name=KidBrowser
-Exec=qmlscene qml/Main.qml
+Exec=qmlscene %u qml/Main.qml
 Icon=assets/logo.svg
 Terminal=false
 Type=Application

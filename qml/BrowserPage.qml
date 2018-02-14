@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
+import Ubuntu.Content 0.1
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Web 0.2
@@ -89,6 +90,40 @@ Page {
         }
 
         pageStack.pop();
+    }
+
+    Arguments {
+        id: args
+
+        Argument {
+            name: 'url'
+            help: i18n.tr('Startup url')
+            required: false
+            valueNames: ['URL']
+        }
+    }
+
+    Connections {
+        target: UriHandler
+        onOpened: {
+            if (uris.length > 0) {
+                console.log('navigating from UriHandler');
+                navigate(uris[0]);
+            }
+        }
+    }
+
+    Component.onCompleted: {
+        if (args.values.url && args.values.url.match(/^http/)) {
+            webview.url = args.values.url;
+        }
+        else if (Qt.application.arguments && Qt.application.arguments.length > 0) {
+            for (var i = 0; i < Qt.application.arguments.length; i++) {
+                if (Qt.application.arguments[i].match(/^http/)) {
+                    webview.url = Qt.application.arguments[i];
+                }
+            }
+        }
     }
 
     Settings {
@@ -267,7 +302,19 @@ Page {
 
         Component.onCompleted: {
             var url = settings.homePage;
+            if (args.values.url && args.values.url.match(/^http/)) {
+                url = args.values.url;
+            }
+            else if (Qt.application.arguments && Qt.application.arguments.length > 0) {
+                for (var i = 0; i < Qt.application.arguments.length; i++) {
+                    if (Qt.application.arguments[i].match(/^http/)) {
+                        url = Qt.application.arguments[i];
+                    }
+                }
+            }
+
             if (url) {
+                console.log('starting up, navigating to:', url);
                 navigate(url);
                 navigator.text = url;
             }
