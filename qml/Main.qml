@@ -4,7 +4,7 @@ import Ubuntu.Components 1.3
 MainView {
     id: root
     objectName: 'mainView'
-    applicationName: 'kidbrowser.bhdouglass'
+    applicationName: 'jadediamond.bhdouglass'
     automaticOrientation: true
     anchorToKeyboard: true
 

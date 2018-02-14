@@ -7,7 +7,7 @@ import Ubuntu.Web 0.2
 import com.canonical.Oxide 1.0 as Oxide
 import Qt.labs.settings 1.0
 
-import KidBrowser 1.0
+import JadeDiamond 1.0
 import PamAuthentication 0.1
 import "BrowserDialogs" as BrowserDialogs
 
@@ -44,13 +44,13 @@ Page {
             PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Accessing a file url is not allowed')});
         }
         else if (isNaN(domain.replace(/\./g, ''))) {
-            if (KidBrowser.isBlacklisted(domain)) {
+            if (JadeDiamond.isBlacklisted(domain)) {
                 console.log('rejected navigation because the request is for a blacklisted domain');
 
                 navigator.text = webview.url;
                 PopupUtils.open(rejectionComponent, root, {text: i18n.tr('Access to this site has been blocked')});
             }
-            else if (KidBrowser.isWhitelisted(domain)) {
+            else if (JadeDiamond.isWhitelisted(domain)) {
                 console.log('navigation ok because the request is for a whitelisted domain');
                 ok = true;
             }
@@ -276,7 +276,7 @@ Page {
             navigator.text = strUrl;
 
             // Simple check for access here to avoid redirects to restricted pages
-            if (strUrl && !KidBrowser.isWhitelisted(parseDomain(strUrl))) {
+            if (strUrl && !JadeDiamond.isWhitelisted(parseDomain(strUrl))) {
                 console.log('Going back to the home page because of a redirect to a non-whitelisted page');
                 url = home;
             }
@@ -284,7 +284,7 @@ Page {
             // TODO track the favicon
 
             if (strUrl != lastUrl) {
-                KidBrowser.addHistory(strUrl, ''); // TODO figure out how to get the title of the page
+                JadeDiamond.addHistory(strUrl, ''); // TODO figure out how to get the title of the page
             }
             lastUrl = strUrl;
         }
@@ -391,10 +391,10 @@ Page {
 
                 onAuthenticationSucceeded: {
                     if (confirmNavigationDialog.goingToBlacklist) {
-                        KidBrowser.addBlacklist(confirmNavigationDialog.domain);
+                        JadeDiamond.addBlacklist(confirmNavigationDialog.domain);
                     }
                     else {
-                        KidBrowser.addWhitelist(confirmNavigationDialog.domain);
+                        JadeDiamond.addWhitelist(confirmNavigationDialog.domain);
                         webview.url = confirmNavigationDialog.url;
                     }
 
@@ -426,7 +426,7 @@ Page {
 
                     // For debugging on the desktop
                     /*
-                    KidBrowser.addWhitelist(confirmNavigationDialog.domain);
+                    JadeDiamond.addWhitelist(confirmNavigationDialog.domain);
                     webview.url = confirmNavigationDialog.url;
                     PopupUtils.close(confirmNavigationDialog);
                     */
@@ -444,7 +444,7 @@ Page {
 
                     // For debugging on the desktop
                     /*
-                    KidBrowser.addBlacklist(confirmNavigationDialog.domain);
+                    JadeDiamond.addBlacklist(confirmNavigationDialog.domain);
                     PopupUtils.close(confirmNavigationDialog);
                     */
                 }

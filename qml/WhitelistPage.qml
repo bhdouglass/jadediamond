@@ -3,7 +3,7 @@ import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
-import KidBrowser 1.0
+import JadeDiamond 1.0
 import PamAuthentication 0.1
 
 Page {
@@ -22,7 +22,7 @@ Page {
         property string urlToRemove
 
         onAuthenticationSucceeded: {
-            KidBrowser.removeWhitelist(urlToRemove);
+            JadeDiamond.removeWhitelist(urlToRemove);
         }
     }
 
@@ -42,7 +42,7 @@ Page {
 
     Label {
         anchors.centerIn: parent
-        visible: KidBrowser.whitelistCount === 0
+        visible: JadeDiamond.whitelistCount === 0
         text: i18n.tr('No allowed sites')
     }
 
@@ -67,7 +67,7 @@ Page {
             spacing: 0
 
             Repeater {
-                model: KidBrowser.whitelist
+                model: JadeDiamond.whitelist
 
                 delegate: ListItem {
                     Label {

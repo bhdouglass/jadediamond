@@ -1,2 +1,2 @@
-add_subdirectory(KidBrowser)
+add_subdirectory(JadeDiamond)
 add_subdirectory(PamAuthentication)

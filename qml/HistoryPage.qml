@@ -3,7 +3,7 @@ import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
-import KidBrowser 1.0
+import JadeDiamond 1.0
 
 Page {
     signal urlSelected(string url)
@@ -16,7 +16,7 @@ Page {
 
     Label {
         anchors.centerIn: parent
-        visible: KidBrowser.historyCount === 0
+        visible: JadeDiamond.historyCount === 0
         text: i18n.tr('We are not makers of history. We are made by history.\n- Martin Luther King, Jr.')
     }
 
@@ -41,7 +41,7 @@ Page {
             spacing: 0
 
             Repeater {
-                model: KidBrowser.history
+                model: JadeDiamond.history
 
                 delegate: ListItem {
                     Label {

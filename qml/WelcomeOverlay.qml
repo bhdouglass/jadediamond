@@ -21,7 +21,7 @@ Flickable {
         Label {
             Layout.fillWidth: true
 
-            text: i18n.tr('Welcome to KidBrowser')
+            text: i18n.tr('Welcome to Jade Diamond')
             textSize: Label.XLarge
             horizontalAlignment: Label.AlignHCenter
         }
@@ -54,6 +54,7 @@ Flickable {
             Layout.alignment: Qt.AlignHCenter
 
             text: homePage
+            inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
             onAccepted: start(text)
         }
 

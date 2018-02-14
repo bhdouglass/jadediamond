@@ -2,8 +2,6 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-import KidBrowser 1.0
-
 Page {
     signal urlSelected(string url)
 
@@ -39,7 +37,7 @@ Page {
 
                 horizontalAlignment: Label.AlignHCenter
                 textSize: Label.XLarge
-                text: i18n.tr('KidBrowser')
+                text: i18n.tr('Jade Diamond')
             }
 
             Label {

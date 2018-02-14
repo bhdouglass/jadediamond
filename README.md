@@ -1,4 +1,4 @@
-# KidBrowser
+# Jade Diamond
 
 A safe browser for kids for Ubuntu Touch
 

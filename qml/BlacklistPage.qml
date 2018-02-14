@@ -3,7 +3,7 @@ import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
-import KidBrowser 1.0
+import JadeDiamond 1.0
 import PamAuthentication 0.1
 
 Page {
@@ -20,7 +20,7 @@ Page {
         property string urlToRemove
 
         onAuthenticationSucceeded: {
-            KidBrowser.removeBlacklist(urlToRemove);
+            JadeDiamond.removeBlacklist(urlToRemove);
         }
     }
 
@@ -40,7 +40,7 @@ Page {
 
     Label {
         anchors.centerIn: parent
-        visible: KidBrowser.blacklistCount === 0
+        visible: JadeDiamond.blacklistCount === 0
         text: i18n.tr('No blocked sites')
     }
 
@@ -65,7 +65,7 @@ Page {
             spacing: 0
 
             Repeater {
-                model: KidBrowser.blacklist
+                model: JadeDiamond.blacklist
 
                 delegate: ListItem {
                     Label {
