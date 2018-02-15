@@ -2,14 +2,14 @@
     "name": "jadediamond.bhdouglass",
     "description": "A safe browser for kids",
     "architecture": "@CLICK_ARCH@",
-    "title": "KidBrowser",
+    "title": "Jade Diamond",
     "hooks": {
         "jadediamond": {
             "apparmor": "jadediamond.apparmor",
             "desktop":  "jadediamond.desktop"
         }
     },
-    "version": "0.0.4",
+    "version": "1.0.0",
     "maintainer": "Brian Douglass <bhdouglass@gmail.com>",
     "framework" : "ubuntu-sdk-15.04.6"
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jadediamond.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 06:31+0000\n"
+"POT-Creation-Date: 2018-02-15 16:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,17 +71,25 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../qml/AboutPage.qml:40 jadediamond.desktop.in.h:1
+#: ../qml/AboutPage.qml:38 jadediamond.desktop.in.h:1
 msgid "Jade Diamond"
 msgstr ""
 
-#: ../qml/AboutPage.qml:44
+#: ../qml/AboutPage.qml:54
 msgid "Author: Brian Douglass"
 msgstr ""
 
-#: ../qml/AboutPage.qml:53
+#: ../qml/AboutPage.qml:63
+msgid "Icon by: Joan CiberSheep"
+msgstr ""
+
+#: ../qml/AboutPage.qml:67
+msgid "Special thanks to Amber for her icon idea!"
+msgstr ""
+
+#: ../qml/AboutPage.qml:71
 msgid ""
-"Special thanks to the UBParents Group\n"
+"Thanks to the UBParents Group\n"
 "for suggestions and testing!"
 msgstr ""
 
@@ -182,26 +190,26 @@ msgid "Enter your password remove %DOMAIN% from the whitelist"
 msgstr ""
 
 #: ../qml/WelcomeOverlay.qml:24
-msgid "Welcome to Jade Diamond"
+msgid "Welcome to Jade Diamond!"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:34
+#: ../qml/WelcomeOverlay.qml:44
 msgid "Enjoy the web while safely browsing with your parents"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:41
+#: ../qml/WelcomeOverlay.qml:51
 msgid ""
 "When you encounter a new site you will need\n"
 "to ask your parent's permission to access it"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:48
+#: ../qml/WelcomeOverlay.qml:58
 msgid ""
 "Set your home page\n"
 "(Ask your parents for help!)"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:64
+#: ../qml/WelcomeOverlay.qml:74
 msgid "Start Browsing"
 msgstr ""
 
