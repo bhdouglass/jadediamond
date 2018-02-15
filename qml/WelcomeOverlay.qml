@@ -21,12 +21,22 @@ Flickable {
         Label {
             Layout.fillWidth: true
 
-            text: i18n.tr('Welcome to Jade Diamond')
+            text: i18n.tr('Welcome to Jade Diamond!')
             textSize: Label.XLarge
             horizontalAlignment: Label.AlignHCenter
         }
 
-        // TODO image or logo
+        Item {
+            Layout.preferredHeight: logo.height
+            Layout.fillWidth: true
+
+            Image {
+                id: logo
+                anchors.centerIn: parent
+
+                source: '../assets/logo.svg'
+            }
+        }
 
         Label {
             Layout.fillWidth: true

@@ -8,6 +8,13 @@ Initialize submodules: `git submodule update --init --recursive`
 
 Build and run using [clickable](https://github.com/bhdouglass/clickable).
 
+## Thanks!
+
+Thanks to Joan CiberSheep for his icon skills and Amber for her icon idea!
+
+Thanks to the [UBParents](https://t.me/UBports_Parents) group (both parents and
+their kids) for testing and feedback!
+
 ## License
 
 Copyright (C) 2018 [Brian Douglass](http://bhdouglass.com/)

@@ -30,14 +30,24 @@ Page {
             }
             spacing: units.gu(2)
 
-            //TODO logo
-
             Label {
                 Layout.fillWidth: true
 
                 horizontalAlignment: Label.AlignHCenter
                 textSize: Label.XLarge
                 text: i18n.tr('Jade Diamond')
+            }
+
+            Item {
+                Layout.preferredHeight: logo.height
+                Layout.fillWidth: true
+
+                Image {
+                    id: logo
+                    anchors.centerIn: parent
+
+                    source: '../assets/logo.svg'
+                }
             }
 
             Label {
@@ -50,7 +60,15 @@ Page {
             }
 
             Label {
-                text: i18n.tr('Special thanks to the UBParents Group\nfor suggestions and testing!')
+                text: i18n.tr('Icon by: Joan CiberSheep')
+            }
+
+            Label {
+                text: i18n.tr('Special thanks to Amber for her icon idea!')
+            }
+
+            Label {
+                text: i18n.tr('Thanks to the UBParents Group\nfor suggestions and testing!')
 
                 MouseArea {
                     anchors.fill: parent
