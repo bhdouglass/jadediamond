@@ -68,6 +68,10 @@ Page {
             }
 
             Label {
+                text: i18n.tr('Special thanks to Luna for naming the app!')
+            }
+
+            Label {
                 text: i18n.tr('Thanks to the UBParents Group\nfor suggestions and testing!')
 
                 MouseArea {

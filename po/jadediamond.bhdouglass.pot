@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jadediamond.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 16:05+0000\n"
+"POT-Creation-Date: 2018-02-16 03:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,10 @@ msgid "Special thanks to Amber for her icon idea!"
 msgstr ""
 
 #: ../qml/AboutPage.qml:71
+msgid "Special thanks to Luna for naming the app!"
+msgstr ""
+
+#: ../qml/AboutPage.qml:75
 msgid ""
 "Thanks to the UBParents Group\n"
 "for suggestions and testing!"

@@ -12,6 +12,8 @@ Build and run using [clickable](https://github.com/bhdouglass/clickable).
 
 Thanks to Joan CiberSheep for icon skills and Amber for the icon idea!
 
+Thanks to Luna for naming the app!
+
 Thanks to the [UBParents](https://t.me/UBports_Parents) group (both parents and
 their kids) for testing and feedback!
 
