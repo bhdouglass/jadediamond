@@ -203,7 +203,7 @@ msgstr "Willkommen zu Jade Diamond!"
 
 #: ../qml/WelcomeOverlay.qml:44
 msgid "Enjoy the web while safely browsing with your parents"
-msgstr "Genieße es, dich mit deinen Eltern sicher im Internet umzusehen"
+msgstr "Erkunde sicher das Internet mit deinen Eltern"
 
 #: ../qml/WelcomeOverlay.qml:51
 msgid ""
@@ -223,7 +223,7 @@ msgstr ""
 
 #: ../qml/WelcomeOverlay.qml:74
 msgid "Start Browsing"
-msgstr "Start Browsing"
+msgstr "Leg los!"
 
 #: ../qml/BlacklistPage.qml:36
 msgid "List of blocked sites"
