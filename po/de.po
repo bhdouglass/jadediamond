@@ -79,7 +79,7 @@ msgstr "Jade Diamond"
 
 #: ../qml/AboutPage.qml:54
 msgid "Author: Brian Douglass"
-msgstr "Author: Brian Douglass"
+msgstr "Autor: Brian Douglass"
 
 #: ../qml/AboutPage.qml:63
 msgid "Icon by: Joan CiberSheep"
