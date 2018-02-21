@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: jadediamond.bhdouglass\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-20 11:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/BrowserDialogs/PromptDialog.qml:5
+msgid "Prompt"
+msgstr "Eingabeaufforderung"
+
+#: ../qml/BrowserDialogs/PromptDialog.qml:14
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:8
+#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:376
+msgid "OK"
+msgstr "OK"
+
+#: ../qml/BrowserDialogs/PromptDialog.qml:20
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:454
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:5
+msgid "Confirm Navigation"
+msgstr "Navigation bestätigen"
+
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:8
+msgid "Leave"
+msgstr "Verlassen"
+
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:13
+msgid "Stay"
+msgstr "Bleiben"
+
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:5
+msgid "Confirmation"
+msgstr "Bestätigung"
+
+#: ../qml/BrowserDialogs/AlertDialog.qml:5
+msgid "Alert"
+msgstr "Alarm"
+
+#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:201
+msgid "History"
+msgstr "Verlauf"
+
+#: ../qml/HistoryPage.qml:20
+msgid ""
+"We are not makers of history. We are made by history.\n"
+"- Martin Luther King, Jr."
+msgstr ""
+"Wir sind nicht die Macher der Geschichte. Wir werden gemacht durch die Geschichte.\n"
+"- Martin Luther King, Jr."
+
+#. TRANSLATORS: Date/time reference here: http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method
+#: ../qml/HistoryPage.qml:55
+msgid "MM/dd/yy hh:mm"
+msgstr "dd.MM.yy hh:mm"
+
+#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:236
+msgid "About"
+msgstr "Über"
+
+#: ../qml/AboutPage.qml:38 jadediamond.desktop.in.h:1
+msgid "Jade Diamond"
+msgstr "Jade Diamond"
+
+#: ../qml/AboutPage.qml:54
+msgid "Author: Brian Douglass"
+msgstr "Autor: Brian Douglass"
+
+#: ../qml/AboutPage.qml:63
+msgid "Icon by: Joan CiberSheep"
+msgstr "Icon: Joan CiberSheep"
+
+#: ../qml/AboutPage.qml:67
+msgid "Special thanks to Amber for her icon idea!"
+msgstr "Besonderer Dank an Amber für ihre Icon-Idee!"
+
+#: ../qml/AboutPage.qml:71
+msgid "Special thanks to Luna for naming the app!"
+msgstr "Besonderer Dank an Luna für den App-Namen!"
+
+#: ../qml/AboutPage.qml:75
+msgid ""
+"Thanks to the UBParents Group\n"
+"for suggestions and testing!"
+msgstr ""
+"Danke an die UBParents Gruppe\n"
+"für Vorschläge und Testen!"
+
+#: ../qml/BrowserPage.qml:38
+msgid "Accessing localhost is not allowed"
+msgstr "Zugriff auf Localhost ist nicht erlaubt"
+
+#: ../qml/BrowserPage.qml:44
+msgid "Accessing a file url is not allowed"
+msgstr "Zugriff auf eine File URL ist nicht erlaubt"
+
+#: ../qml/BrowserPage.qml:51
+msgid "Access to this site has been blocked"
+msgstr "Zugriff auf diese Seite wurde blockiert"
+
+#: ../qml/BrowserPage.qml:71
+msgid "Accessing IP addresses is not allowed"
+msgstr "Zugriff auf IP-Adressen ist nicht erlaubt"
+
+#: ../qml/BrowserPage.qml:100
+msgid "Startup url"
+msgstr "Start URL"
+
+#: ../qml/BrowserPage.qml:163
+msgid "Forward"
+msgstr "Vorwärts"
+
+#: ../qml/BrowserPage.qml:173
+msgid "Back"
+msgstr "Zurück"
+
+#: ../qml/BrowserPage.qml:183
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: ../qml/BrowserPage.qml:192
+msgid "Home"
+msgstr "Startseite"
+
+#: ../qml/BrowserPage.qml:211 ../qml/BlacklistPage.qml:13
+msgid "Blacklist"
+msgstr "Blacklist"
+
+#: ../qml/BrowserPage.qml:220 ../qml/WhitelistPage.qml:15
+msgid "Whitelist"
+msgstr "Whitelist"
+
+#: ../qml/BrowserPage.qml:230
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: ../qml/BrowserPage.qml:373
+msgid "Not Allowed"
+msgstr "Nicht Erlaubt"
+
+#: ../qml/BrowserPage.qml:413
+msgid "Access Requested"
+msgstr "Zugriff erbeten"
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
+#: ../qml/BrowserPage.qml:416
+msgid "Access to %DOMAIN% requested"
+msgstr "Zugriff auf %DOMAIN% erbeten"
+
+#: ../qml/BrowserPage.qml:419
+msgid "Grant Access"
+msgstr "Zugriff erlauben"
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
+#: ../qml/BrowserPage.qml:425
+msgid "Enter your password to grant access to %DOMAIN%"
+msgstr "Passwort eingeben, um Zugriff auf %DOMAIN% zu erlauben"
+
+#: ../qml/BrowserPage.qml:437
+msgid "Block Access"
+msgstr "Zugriff blockieren"
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being requested
+#: ../qml/BrowserPage.qml:443
+msgid "Enter your password to block access to %DOMAIN%"
+msgstr "Passwort eingeben, um Zugriff auf %DOMAIN% zu blockieren"
+
+#: ../qml/WhitelistPage.qml:38
+msgid "List of allowed sites"
+msgstr "Liste erlaubter Seiten"
+
+#: ../qml/WhitelistPage.qml:46
+msgid "No allowed sites"
+msgstr "Keine erlaubten Seiten"
+
+#: ../qml/WhitelistPage.qml:90 ../qml/BlacklistPage.qml:86
+msgid "Remove"
+msgstr "Entfernen"
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+#: ../qml/WhitelistPage.qml:94
+msgid "Enter your password remove %DOMAIN% from the whitelist"
+msgstr "Passwort eingeben, um %DOMAIN% von der Whitelist zu entfernen"
+
+#: ../qml/WelcomeOverlay.qml:24
+msgid "Welcome to Jade Diamond!"
+msgstr "Willkommen zu Jade Diamond!"
+
+#: ../qml/WelcomeOverlay.qml:44
+msgid "Enjoy the web while safely browsing with your parents"
+msgstr "Erkunde sicher das Internet mit deinen Eltern"
+
+#: ../qml/WelcomeOverlay.qml:51
+msgid ""
+"When you encounter a new site you will need\n"
+"to ask your parent's permission to access it"
+msgstr ""
+"Wenn du einer neuen Seite begegnest,\n"
+"musst du um die Erlaubnis deiner Eltern fragen"
+
+#: ../qml/WelcomeOverlay.qml:58
+msgid ""
+"Set your home page\n"
+"(Ask your parents for help!)"
+msgstr ""
+"Startseite festlegen\n"
+"(Frage deine Eltern nach Hilfe!)"
+
+#: ../qml/WelcomeOverlay.qml:74
+msgid "Start Browsing"
+msgstr "Leg los!"
+
+#: ../qml/BlacklistPage.qml:36
+msgid "List of blocked sites"
+msgstr "Liste blockierter Seiten"
+
+#: ../qml/BlacklistPage.qml:44
+msgid "No blocked sites"
+msgstr "Keine blockierten Seiten"
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+#: ../qml/BlacklistPage.qml:90
+msgid "Enter your password remove %DOMAIN% from the blacklist"
+msgstr "Passwort eingeben, um %DOMAIN% von der Blacklist zu entfernen"
