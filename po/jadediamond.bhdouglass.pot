@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the jadediamond.bhdouglass package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jadediamond.bhdouglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:16+0000\n"
+"POT-Creation-Date: 2018-07-17 01:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,84 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/BrowserDialogs/PromptDialog.qml:5
-msgid "Prompt"
+#: ../qml/WelcomeOverlay.qml:24
+msgid "Welcome to Jade Diamond!"
 msgstr ""
 
-#: ../qml/BrowserDialogs/PromptDialog.qml:14
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:8
-#: ../qml/BrowserDialogs/AlertDialog.qml:8 ../qml/BrowserPage.qml:376
-msgid "OK"
+#: ../qml/WelcomeOverlay.qml:44
+msgid "Enjoy the web while safely browsing with your parents"
 msgstr ""
 
-#: ../qml/BrowserDialogs/PromptDialog.qml:20
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:13 ../qml/BrowserPage.qml:454
-msgid "Cancel"
-msgstr ""
-
-#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:5
-msgid "Confirm Navigation"
-msgstr ""
-
-#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:8
-msgid "Leave"
-msgstr ""
-
-#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:13
-msgid "Stay"
-msgstr ""
-
-#: ../qml/BrowserDialogs/ConfirmDialog.qml:5
-msgid "Confirmation"
-msgstr ""
-
-#: ../qml/BrowserDialogs/AlertDialog.qml:5
-msgid "Alert"
-msgstr ""
-
-#: ../qml/HistoryPage.qml:14 ../qml/BrowserPage.qml:201
-msgid "History"
-msgstr ""
-
-#: ../qml/HistoryPage.qml:20
+#: ../qml/WelcomeOverlay.qml:51
 msgid ""
-"We are not makers of history. We are made by history.\n"
-"- Martin Luther King, Jr."
+"When you encounter a new site you will need\n"
+"to ask your parent's permission to access it"
 msgstr ""
 
-#. TRANSLATORS: Date/time reference here: http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method
-#: ../qml/HistoryPage.qml:55
-msgid "MM/dd/yy hh:mm"
-msgstr ""
-
-#: ../qml/AboutPage.qml:11 ../qml/BrowserPage.qml:236
-msgid "About"
-msgstr ""
-
-#: ../qml/AboutPage.qml:38 jadediamond.desktop.in.h:1
-msgid "Jade Diamond"
-msgstr ""
-
-#: ../qml/AboutPage.qml:54
-msgid "Author: Brian Douglass"
-msgstr ""
-
-#: ../qml/AboutPage.qml:63
-msgid "Icon by: Joan CiberSheep"
-msgstr ""
-
-#: ../qml/AboutPage.qml:67
-msgid "Special thanks to Amber for her icon idea!"
-msgstr ""
-
-#: ../qml/AboutPage.qml:71
-msgid "Special thanks to Luna for naming the app!"
-msgstr ""
-
-#: ../qml/AboutPage.qml:75
+#: ../qml/WelcomeOverlay.qml:58
 msgid ""
-"Thanks to the UBParents Group\n"
-"for suggestions and testing!"
+"Set your home page\n"
+"(Ask your parents for help!)"
+msgstr ""
+
+#: ../qml/WelcomeOverlay.qml:74
+msgid "Start Browsing"
 msgstr ""
 
 #: ../qml/BrowserPage.qml:38
@@ -133,6 +77,10 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: ../qml/BrowserPage.qml:201 ../qml/HistoryPage.qml:14
+msgid "History"
+msgstr ""
+
 #: ../qml/BrowserPage.qml:211 ../qml/BlacklistPage.qml:13
 msgid "Blacklist"
 msgstr ""
@@ -145,8 +93,18 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
+#: ../qml/BrowserPage.qml:236 ../qml/AboutPage.qml:11
+msgid "About"
+msgstr ""
+
 #: ../qml/BrowserPage.qml:373
 msgid "Not Allowed"
+msgstr ""
+
+#: ../qml/BrowserPage.qml:376 ../qml/BrowserDialogs/ConfirmDialog.qml:8
+#: ../qml/BrowserDialogs/PromptDialog.qml:14
+#: ../qml/BrowserDialogs/AlertDialog.qml:8
+msgid "OK"
 msgstr ""
 
 #: ../qml/BrowserPage.qml:413
@@ -176,45 +134,33 @@ msgstr ""
 msgid "Enter your password to block access to %DOMAIN%"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:38
-msgid "List of allowed sites"
+#: ../qml/BrowserPage.qml:454 ../qml/BrowserDialogs/ConfirmDialog.qml:13
+#: ../qml/BrowserDialogs/PromptDialog.qml:20
+msgid "Cancel"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:46
-msgid "No allowed sites"
+#: ../qml/BrowserDialogs/ConfirmDialog.qml:5
+msgid "Confirmation"
 msgstr ""
 
-#: ../qml/WhitelistPage.qml:90 ../qml/BlacklistPage.qml:86
-msgid "Remove"
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:5
+msgid "Confirm Navigation"
 msgstr ""
 
-#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
-#: ../qml/WhitelistPage.qml:94
-msgid "Enter your password remove %DOMAIN% from the whitelist"
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:8
+msgid "Leave"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:24
-msgid "Welcome to Jade Diamond!"
+#: ../qml/BrowserDialogs/BeforeUnloadDialog.qml:13
+msgid "Stay"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:44
-msgid "Enjoy the web while safely browsing with your parents"
+#: ../qml/BrowserDialogs/PromptDialog.qml:5
+msgid "Prompt"
 msgstr ""
 
-#: ../qml/WelcomeOverlay.qml:51
-msgid ""
-"When you encounter a new site you will need\n"
-"to ask your parent's permission to access it"
-msgstr ""
-
-#: ../qml/WelcomeOverlay.qml:58
-msgid ""
-"Set your home page\n"
-"(Ask your parents for help!)"
-msgstr ""
-
-#: ../qml/WelcomeOverlay.qml:74
-msgid "Start Browsing"
+#: ../qml/BrowserDialogs/AlertDialog.qml:5
+msgid "Alert"
 msgstr ""
 
 #: ../qml/BlacklistPage.qml:36
@@ -225,7 +171,61 @@ msgstr ""
 msgid "No blocked sites"
 msgstr ""
 
+#: ../qml/BlacklistPage.qml:86 ../qml/WhitelistPage.qml:90
+msgid "Remove"
+msgstr ""
+
 #. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
 #: ../qml/BlacklistPage.qml:90
 msgid "Enter your password remove %DOMAIN% from the blacklist"
+msgstr ""
+
+#: ../qml/AboutPage.qml:38 jadediamond.desktop.in.h:1
+msgid "Jade Diamond"
+msgstr ""
+
+#: ../qml/AboutPage.qml:54
+msgid "Author: Brian Douglass"
+msgstr ""
+
+#: ../qml/AboutPage.qml:63
+msgid "Icon by: Joan CiberSheep"
+msgstr ""
+
+#: ../qml/AboutPage.qml:67
+msgid "Special thanks to Amber for her icon idea!"
+msgstr ""
+
+#: ../qml/AboutPage.qml:71
+msgid "Special thanks to Luna for naming the app!"
+msgstr ""
+
+#: ../qml/AboutPage.qml:75
+msgid ""
+"Thanks to the UBParents Group\n"
+"for suggestions and testing!"
+msgstr ""
+
+#: ../qml/WhitelistPage.qml:38
+msgid "List of allowed sites"
+msgstr ""
+
+#: ../qml/WhitelistPage.qml:46
+msgid "No allowed sites"
+msgstr ""
+
+#. TRANSLATORS: %DOMAIN% will be automatically replaced with the domain being removed
+#: ../qml/WhitelistPage.qml:94
+msgid "Enter your password remove %DOMAIN% from the whitelist"
+msgstr ""
+
+#: ../qml/HistoryPage.qml:20
+msgid ""
+"We are not makers of history. We are made by history.\n"
+"- Martin Luther King, Jr."
+msgstr ""
+
+#. TRANSLATORS: Date/time reference here: http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method
+#: ../qml/HistoryPage.qml:55
+msgid "MM/dd/yy hh:mm"
 msgstr ""
